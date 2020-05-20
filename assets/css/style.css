@@ -1,0 +1,67 @@
+/**/
+
+body {
+	text-align: center;
+	font-family: 'Noto Sans JP', sans-serif;
+	color: #000000;
+	background-color: #ffffff;
+	font-weight: 400;
+}
+
+.tamIcon {
+	font-size: 50px;
+	color: #4285f4;
+}
+
+.tamIcon:hover {
+	color: #0056B3;
+}
+
+
+.jumbotron {
+	background-color: transparent;
+}
+
+.card {
+	border: none;
+	background-color: transparent;
+}
+
+.navbar {
+	background-color: #E3EDFD;
+	
+}
+
+.resende {
+	color: #4285f4;
+	font-weight:medium;
+}
+
+.robson {
+	color: #6C757D;
+	font-weight:medium;
+}
+
+.azulClaro {
+	color: #4285f4;
+}
+
+.azulEscuro {
+	color: #0056B3;
+}
+
+.azulPalido {
+	color: #E3EDFD;
+}
+
+.cinzaPadrao {
+	color: #6C757D;
+}
+
+.bgPalido {
+	background-color: #E3EDFD;
+}
+
+.bgCinza {
+	background-color: #6C757D;
+}
