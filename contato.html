@@ -27,20 +27,31 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
     </style>
 
-    <style media="all">
+    <!--<style media="all">
       .intro {
         background-image: url("assets/img/matrix.jpg");
         background-size: cover;
         background-repeat: repeat-y;
       }
-    </style>
+    </style>-->
 
+    <style type="text/css">
+        canvas {
+          display: flex;
+          margin: 0 auto;
+          width: 100%;
+          height: 100%;
+          position: fixed;
+        }
+    </style>
 
     <title>Robson Resende</title>
   </head>
-  <body class="text-center img-fluid d-flex w-100 h-100 intro">
+  <body class="text-center img-fluid d-flex w-100 h-100" onload="carregar()">
+
+    <canvas id="canvas"></canvas><!-- FINAL DO CANVAS ---------------------------->
     
-   <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column" style="z-index: 1">
       <header class="masthead mb-auto">
         <div class="inner">
           <h3 class="masthead-brand">ROBSON RESENDE</h3>
@@ -75,7 +86,40 @@
       </footer>
     </div>
 
-    <!--Javascript do overlay ------------------------------------------------ -->
+    <!-- INÍCIO DO JAVASCRIPT MATRIX-->
+    <script>
+      function efeitoMatrix(neo) {
+      //  Variáveis globais
+        var tela  = window.screen;
+        var largura = neo.width   = tela.width;
+        var altura  = neo.height  = tela.height;
+        var letras  = Array(256).join(1).split('');
+      //  Desenha o efeito matrix na tela 
+        var desenhaMatrix = function(){
+        // Fundo Preto
+          neo.getContext('2d').fillStyle = 'rgba(0,0,0,.05)';
+          neo.getContext('2d').fillRect(0,0,largura,altura);
+        //  Letras
+          /*neo.getContext('2d').fillStyle = '#0F0';*/
+          neo.getContext('2d').fillStyle = '#0A0';
+        //
+          letras.map(function(posicao_y, index){
+        //  Texto 
+          var texto = String.fromCharCode(48 + Math.random() * 33);
+          var posicao_x = index * 10;
+          neo.getContext('2d').fillText(texto, posicao_x, posicao_y);
+        //  Array index
+          letras[index] = (posicao_y > 758 + Math.random() * 1e4) ? 0 : posicao_y + 10;  
+          });
+        }
+        setInterval(desenhaMatrix, 60);
+      }
+    //  Função de carregar a página e pasar o id canvas para a função
+      function carregar() {
+        var canvas = document.getElementById('canvas')
+        efeitoMatrix(canvas);
+      }
+    </script><!-- FINAL DO JAVASCRIPT MATRIX-->
     
   </body>
 </html>
