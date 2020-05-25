@@ -16,7 +16,7 @@ a:hover {
   color: #333;
   text-shadow: none; /* Previne herença do `body` */
   /*background-color: #fff;*/
-  background-color: rgb(255,255,255,0.6);
+  background-color: #B4B4B4;
   /*border: .05rem solid #fff;*/
   border: none;
 }
@@ -113,6 +113,6 @@ body {
 }
 
 .fab {
-  font-size: 50px;
-  color: rgba(255, 255, 255, .7);
+  font-size: 40px;
+  color: #B4B4B4;
 }
