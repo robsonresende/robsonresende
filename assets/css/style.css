@@ -116,3 +116,11 @@ body {
   font-size: 40px;
   color: #B4B4B4;
 }
+
+.card-group > .card:first-child .card-img-top{
+  border-radius: 7px;
+}
+
+.card-group > .card:last-child .card-img-top {
+  border-radius: 7px;
+}
