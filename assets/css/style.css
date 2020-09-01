@@ -118,9 +118,9 @@ body {
 }
 
 .card-group > .card:first-child .card-img-top{
-  border-radius: 7px;
+  border-radius: 0px;
 }
 
 .card-group > .card:last-child .card-img-top {
-  border-radius: 7px;
+  border-radius: 0px;
 }
