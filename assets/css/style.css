@@ -1,128 +1,250 @@
-/*
- * Globals
- */
-
-/* Links */
-a,
-a:focus,
-a:hover {
-  color: #fff;
+/******  linha de teste - apenas para testar as atualizações do github ******/
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	vertical-align: baseline;
+	scroll-behavior: smooth;
 }
 
-/* Botão padrão customizado */
-.btn-secondary,
-.btn-secondary:hover,
-.btn-secondary:focus {
-  color: #333;
-  text-shadow: none; /* Previne herença do `body` */
-  /*background-color: #fff;*/
-  background-color: #B4B4B4;
-  /*border: .05rem solid #fff;*/
-  border: none;
-}
-
-
-/*
- * Estrutura base
- */
-
-html,
 body {
+	background-color: #ffffff;
+	color: #000000;
+	font-family: helvetica, arial, sans-serif;
+	background-image: url("../img/blue-1920.jpg");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+}
+
+p {
+	padding: 0 0.5em 0 0.5em;
+	text-align: justify;
+  	text-justify: inter-word;
+  	font-style: italic;
+}
+
+a:link, a:visited {
+	font-weight: bold;
+	color: #000000;
+	text-decoration: none;
+}
+
+a:hover, a:active {
+	color: rgba(255,255,255, 0.7);
+}
+
+/****** overlay ******/
+.layerImage {
+  position: fixed;
+  width: 100%;
   height: 100%;
-  /*background-color: #333;*/
-  font-family: helvetica, cursive, arial;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255,255,255,0.25);
+  z-index: -2;
 }
 
-body {
-  display: -ms-flexbox;
-  display: flex;
-  color: #fff;
-  text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
-  box-shadow: inset 0 0 5rem rgba(0, 0, 0, .5);
+/****** configurando o cabeçalho ******/
+#logo {
+	font-size: 2em;
 }
 
-.cover-container {
-  max-width: 42em;
+#inicial {
+	width: 100%;
+	min-height: 100vh;
 }
 
-
-/*
- * Cabeçalho
- */
-.masthead {
-  margin-bottom: 2rem;
+#conteudo {
+	width: 100%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
 }
 
-.masthead-brand {
-  margin-bottom: 0;
+#conteudo p {
+	text-align: center;
 }
 
-.nav-masthead .nav-link {
-  padding: .25rem 0;
-  font-weight: 700;
-  color: rgba(255, 255, 255, .5);
-  background-color: transparent;
-  border-bottom: .25rem solid transparent;
-}
-
-.nav-masthead .nav-link:hover,
-.nav-masthead .nav-link:focus {
-  border-bottom-color: rgba(255, 255, 255, .25);
-}
-
-.nav-masthead .nav-link + .nav-link {
-  margin-left: 1rem;
+header {
+	max-width: 90%;
+	margin: 1em auto 0 auto;
+	background-color: transparent;
 }
 
 
-.nav-masthead .active {
-  color: #fff;
-  border-bottom-color: #fff;
+
+nav {
+	float: right;
+	padding-top: 1em;
 }
 
-@media (min-width: 48em) {
-  .masthead-brand {
-    float: left;
-  }
-  .nav-masthead {
-    float: right;
-  }
+/****** estilizando o menu ******/
+#menu a {
+	border-radius: 3px;
+	border: #000000 2px solid;
+	padding: 0 0.2em 0 0.2em;
+}
+
+#menu a:hover {
+	border: rgba(255,255,255, 0.7) 2px solid;
+}
+
+#icones {
+	min-width: 8em;
+	font-size: 1.75em;
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translate(-50%, -0.5em);
+	text-align: center;
+	display: flex;
+	justify-content: space-between;
+}
+
+#portifolio {
+	min-height: 100vh;
+	background-color: #ffffff;
+	text-align: center;
+}
+
+.row {
+	width: 100%;
+	box-sizing: border-box;
+	margin-top: 2em;
+	text-align: center;
 }
 
 
-/*
- * Capa
- */
-.cover {
-  padding: 0 1.5rem;
+/****** criando colunas iguais e que flutuam próximas umas das outras ******/
+.column {
+	width: 80%;
+	margin: 1em auto 2em auto;
+	text-align: center;
 }
-.cover .btn-lg {
-  padding: .75rem 1.25rem;
-  font-weight: 700;
+
+/****** frame ******/
+.frame {
+	max-width: 500px;
+	border: rgba(0,0,204, 0.5) 1px solid;
+	text-align: center;
+	margin: 0 auto;
+}
+
+.frame:hover {
+	transform: scale(1.05, 1.05);
+}
+
+.img-card {
+	max-width: 100%;
+	height: auto;
+	overflow: hidden;
+}
+
+.text-card {
+	text-align: center;
+	background-color: rgba(0,0,204, 0.5);
+	max-width: 100%;
+}
+
+.text-card p {
+	padding: 0 !important;
+	margin: 0;
+}
+
+#contato {
+	width: 100%;
+	min-height: 100vh;
+	background-color: transparent;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center
+}
+
+#contato * {
+	margin: 0.5em 0 0.5em 0;
+}
+
+#parFoto {
+	max-width: 90%;
+	text-align: center;
+}
+
+#foto {
+	border-radius: 50%;
+	border: rgba(255,255,255, 0.5) 5px solid;
+	max-width: 90%;
+	height: auto;
+}
+
+#myLinks {
+	font-size: 2em;
+}
+
+.generic-btn {
+	padding: 0.75em;
+	border-radius: 5px;
+	background-color: rgba(255,255,255, 0.5);
+	color: #000000;
+	font-weight: bold;
+}
+
+.generic-btn:hover {
+	background-color: rgba(0,0,0, 0.5);
+	color: #ffffff;
 }
 
 
-/*
- * Footer
- */
-.mastfoot {
-  color: rgba(255, 255, 255, .5);
+/*********** dispositivos médios ***********/
+@media (min-width: 768.01px) and (max-width: 1200px) {
+	.column {
+		width: 80%;
+	}
+
+	.frame {
+		max-width: 400px;
+	}
 }
 
-.card {
-  background-color: transparent;
-  border: none;
+
+/*********** dispositivos pequenos ***********/
+@media (min-width: 576.01px) and (max-width: 768px) {
+	.column {
+		width: 80%;
+	}
+
+	.frame {
+		max-width: 350px;
+	}
 }
 
-.fab {
-  font-size: 40px;
-  color: #B4B4B4;
-}
+/*********** dispositivos extra pequenos ***********/
+@media screen and (max-width: 576px) {
+	nav {
+		float: none;
+		text-align: center;
+		padding-top: 0;
+	}
 
-.card-group > .card:first-child .card-img-top{
-  border-radius: 0px;
-}
+	header {
+		text-align: center;
+		max-width: 100%;
+	}
 
-.card-group > .card:last-child .card-img-top {
-  border-radius: 0px;
+	#menu {
+		display: none;
+	}
+
+	.column {
+		width: 98%;
+	}
+
+	.frame {
+		max-width: 220px;
+	}
 }

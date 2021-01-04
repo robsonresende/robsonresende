@@ -5,119 +5,113 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+    <!-- Favicon -->
     <link rel="favicon icon" type="image/png" href="assets/img/logo3D-100.png"/>
 
-    <!-- CANONICAL TAG-->
-    <link rel="canonical" href="https://robsonresende.github.io">
-
-    <!-- META TAG DESCRIPTION sugerida pelo Bing Webmaster Tools --------->
-    <meta name="description" content="Robson Resende. Criação de Sites WordPress, portfólio, contato.">
-   
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-
-    
-    <!-- JavaScript (Opcional) -->
-    <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
-    <script src="assets/js/jquery-3.3.1.slim.min.js"></script>
-    <script src="assets/js/popper.min.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-
-    <!-- CSS adicional -->
+    <!-- CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- JavaScript (Opcional) -->
+    <script src="#"></script>
 
     <!-- Icones FontAwesome-->
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.13.0/css/all.css">
 
-        <!-- Fonte do Google Fonts-->
-    <style>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
-    </style>
-
-    <!--<style media="all">
-      .intro {
-        background-image: url("assets/img/matrix.jpg");
-        background-size: cover;
-      }
-    </style>-->
-
-    <!-- TAG STYLE DO EFEITO MATRIX ---------------->
-    <style type="text/css">
-        canvas {
-          display: flex;
-          margin: 0 auto;
-          width: 100%;
-          height: 100%;
-          position: fixed;
-        }
-    </style>
-
-
     <title>Robson Resende</title>
   </head>
-  <body class="text-center img-fluid d-flex w-100 h-100" onload="carregar()">
+  <body>
 
-    <canvas id="canvas"></canvas><!-- FINAL DO CANVAS ---------------------------->
-    
-   <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column" style="z-index: 1">
-      <header class="masthead mb-auto">
-        <div class="inner">
-          <h3 class="masthead-brand">ROBSON RESENDE</h3>
-          <nav class="nav nav-masthead justify-content-center">
-            <a class="nav-link active" href="index.html">INÍCIO</a>
-            <a class="nav-link" href="portfolio.html">PORTFÓLIO</a>
-            <a class="nav-link" href="contato.html">CONTATO</a>
-          </nav>
-        </div>
+    <canvas class="layerImage"></canvas>
+
+    <div id="inicial">
+
+      <header>
+        <a href="#" id="logo">Robson Resende</a>
+        <nav id="menu">
+          <a href="#portifolio">Portifólio</a>
+          <span>&nbsp;</span>
+          <a href="#contato">Contato</a>
+        </nav>
       </header>
 
-      <main role="main" class="inner cover">
-        <h1 class="cover-heading">CRIAÇÃO DE SITES</h1>
-        <p class="lead">Websites personalizados com tecnologia WordPress.</p>
-        
-      </main>
+      <div id="conteudo">
+        <h1>Desenvolvedor Front End</h1>
+        <p>Websites personalizados com tecnologia HTML, CSS, Javascript e Bootstrap.</p>
+      </div><!-- final da div conteudo -->
 
-      <footer class="mastfoot mt-auto">
-        <div class="inner">
-          <p><a href="index.html">2020 Robson Resende</a></p>
-        </div>
-      </footer>
-    </div>
+      <div id="icones">
+        <i class="fab fa-html5"></i>
+        <i class="fab fa-css3-alt"></i>
+        <i class="fab fa-js"></i>
+        <i class="fab fa-bootstrap"></i>
+      </div>
 
-    <!-- INÍCIO DO JAVASCRIPT MATRIX--------------------------------------------------->
-    <script>
-      function efeitoMatrix(neo) {
-      //  Variáveis globais
-        var tela  = window.screen;
-        var largura = neo.width   = tela.width;
-        var altura  = neo.height  = tela.height;
-        var letras  = Array(256).join(1).split('');
-      //  Desenha o efeito matrix na tela 
-        var desenhaMatrix = function(){
-        // Fundo Preto
-          neo.getContext('2d').fillStyle = 'rgba(0,0,0,.05)';
-          neo.getContext('2d').fillRect(0,0,largura,altura);
-        //  Letras
-          /*neo.getContext('2d').fillStyle = '#0F0';*/
-          neo.getContext('2d').fillStyle = '#0A0';
-        //
-          letras.map(function(posicao_y, index){
-        //  Texto 
-          var texto = String.fromCharCode(48 + Math.random() * 33);
-          var posicao_x = index * 10;
-          neo.getContext('2d').fillText(texto, posicao_x, posicao_y);
-        //  Array index
-          letras[index] = (posicao_y > 758 + Math.random() * 1e4) ? 0 : posicao_y + 10;  
-          });
-        }
-        setInterval(desenhaMatrix, 60);
-      }
-    //  Função de carregar a página e pasar o id canvas para a função
-      function carregar() {
-        var canvas = document.getElementById('canvas')
-        efeitoMatrix(canvas);
-      }
-    </script><!-- FINAL DO JAVASCRIPT MATRIX----------------------------------------->
+    </div><!-- final da div inicial -->
+
+    <div id="portifolio">
+
+      <p>&nbsp;</p>
+
+      <h2>Alguns Dos Meus Trabalhos</h2>
+
+      <div class="row">
+
+        <div class="column">
+          <div class="frame">
+              <a href="https://robsonresende.github.io/criar-curriculo/" target="_blank">
+                <img src="assets/img/craftsmen-640.jpg" alt="trabalhadores da construção" class="img-card">
+                <p class="text-card">Curriculum Grátis</p>
+              </a>
+          </div>
+        </div><!-- final da div column -->
+
+        <div class="column">
+          <div class="frame">
+            <a href="https://robsonresende.github.io/pet-shop/" target="_blank">
+              <img src="assets/img/dog1.jpg" alt="cachorro deitado" class="img-card">
+              <p class="text-card">Pet Shop</p>
+            </a>
+          </div>
+        </div><!-- final da div column -->
+
+        <div class="column">
+          <div class="frame">
+            <a href="https://robsonresende.github.io/advogado/" target="_blank">
+              <img src="assets/img/hammer-editado.jpg" alt="martelo e livro" class="img-card">
+              <p class="text-card">Advogado</p>
+            </a>
+          </div>
+        </div><!-- final da div column -->
+
+
+      </div><!-- final da div row -->
+
+      <p>&nbsp;</p>
+
+    </div><!-- final da div portifolio  -->
+
+    <div id="contato">
+
+      <p id="parFoto">
+        <img src="assets/img/robson-oficial-peq.jpg" id="foto" alt="Imagem de Robson">
+      </p>
+
+      <p>Para entrar em contato comigo, preencha o formulário e eu responderei o mais breve possível.</p>
+
+      <a href="https://forms.gle/j44zjg4YN6c1FEhz7" target="_blank"><button class="generic-btn">Formulário</button></a>
+
+      <p>Ou siga-me nas redes sociais.</p>
+
+      <div id="myLinks">
+        <a href="https://www.linkedin.com/in/robsonresende" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+
+        <span> | </span>
+
+        <a href="https://github.com/robsonresende" target="_blank"><i class="fab fa-github"></i></a>
+      </div>
+
+    </div><!-- final da div contato -->
+
     
   </body>
 </html>
