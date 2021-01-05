@@ -112,6 +112,18 @@ nav {
 	text-align: center;
 }
 
+.dividerP {
+	width: 100%;
+}
+
+.dividerM {
+	width: 100%;
+}
+
+.dividerG {
+	width: 100%;
+}
+
 .row {
 	width: 100%;
 	margin-top: 2em;
@@ -239,6 +251,16 @@ nav {
   .col-lg-12 {
     width: 100%;
   }
+
+  .dividerP {
+	display: none;
+}
+
+.dividerM {
+	display: none;
+}
+
+
 }
 
 
@@ -285,11 +307,20 @@ nav {
     width: 100%;
   }
 
+  .dividerP {
+	display: none;
+	}
+
+	.dividerG {
+		display: none;
+	}
+
   .corner3 {
   	float: none;
   	margin-left: auto;
   	margin-right: auto;
   }
+
 }
 
 /*********** dispositivos pequenos ***********/
@@ -309,5 +340,12 @@ nav {
 		display: none;
 	}
 
-	
+	.dividerM {
+	display: none;
+	}
+
+	.dividerG {
+		display: none;
+	}
+
 }
